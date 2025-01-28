@@ -89,6 +89,91 @@ LDMVFI/eval_results/CustomData/
 ```
 This structure ensures that results for each sequence are organized and easily accessible.
 
+
+
+
+
+## **Custom Test Set Implementation for Generating Intermediate Frames**
+
+This repository includes a second modified test set handler, which can generate 16 intermediate frames between each pair of input frames. Below are the key highlights of its functionality:
+
+- **Input Frame Requirements**: The input frames are named `frame_001.png` and `frame_019.png`, located in the `input` folder for each sequence. 
+- **Intermediate Frame Generation**: Starting from `frame_001` and `frame_019`, the implementation dynamically generates frames `frame_002` to `frame_018` following a hierarchical approach.
+- **No Ground Truth Required**: Unlike the previous test set, this setup does not rely on ground truth frames (`gt`) for evaluation.
+- **Output Directory**: All generated frames for each sequence are saved in the same directory structure as the input frames. For example, results for `sequence1` will be saved in:
+
+```
+LDMVFI/eval_results/CustomData/
+├── sequence1/
+│   ├── frame_001.png
+│   ├── frame_002.png
+│   ├── frame_003.png
+│   ├── ...
+│   ├── frame_018.png
+│   └── frame_019.png
+├── sequence2/
+│   ├── frame_001.png
+│   ├── frame_002.png
+│   ├── ...
+│   └── frame_019.png
+└── ...
+```
+- **Efficient Frame Hierarchy**: Frames are generated in a structured manner, ensuring consistency across multiple levels of interpolation.
+
+---
+
+### **Custom Dataset Structure for Intermediate Frame Generation**
+The custom dataset used in this implementation follows this folder structure:
+```
+<data_directory>/
+├── customedata/
+│   ├── input/
+│   │   ├── sequence1/
+│   │   │   ├── frame_001.png
+│   │   │   └── frame_019.png
+│   │   ├── sequence2/
+│   │   │   ├── frame_001.png
+│   │   │   └── frame_019.png
+│   │   ├── sequence3/
+│   │   │   ├── frame_001.png
+│   │   │   └── frame_019.png
+│   │   └── ...
+```
+Each sequence is stored in its own folder under `input`. The `input` folder contains the starting and ending frames (`frame_001.png` and `frame_019.png`).
+
+---
+
+### Custom Dataset Evaluation Results for Intermediate Frames
+For this dataset, the evaluation results are saved in:
+```
+LDMVFI/eval_results/CustomData/
+```
+Within this directory, each sequence will have its own subfolder containing all the generated frames. For example:
+```
+LDMVFI/eval_results/CustomData/
+├── sequence1/
+│   ├── frame_001.png
+│   ├── frame_002.png
+│   ├── frame_003.png
+│   ├── ...
+│   ├── frame_018.png
+│   └── frame_019.png
+├── sequence2/
+│   ├── frame_001.png
+│   ├── frame_002.png
+│   ├── ...
+│   └── frame_019.png
+└── ...
+```
+This structure ensures that results for each sequence are organized and accessible for further analysis.
+
+---
+
+
+
+
+
+
 ## **Citing**
 
 If you use this repository or the adapted methods, please cite the original repository:
