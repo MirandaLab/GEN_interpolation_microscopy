@@ -1,4 +1,4 @@
-# Cells_Interpolation_With_Diffusion
+# Cell_Interpolation_With_Diffusion
 
 # Latent Diffusion Models for Video Frame Interpolation (LDMVFI)
 
