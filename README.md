@@ -69,7 +69,29 @@ The custom dataset used in this implementation follows this folder structure:
 Each sequence is stored in its own folder under `input` and `gt`. The `input` folder contains the input frames (`1.png` and `3.png`), while the `gt` folder contains the corresponding ground truth frame (`2.png`).
 
 ---
-
+### Custom Dataset Evaluation Results
+For the custom dataset, the evaluation results are saved in:
+```
+LDMVFI/eval_results/CustomData/
+```
+Within this directory, each sequence will have its own subfolder. For example:
+```
+LDMVFI/eval_results/CustomData/
+├── sequence1/
+│   ├── interpolated_frames/
+│   ├── metrics.txt
+│   └── ...
+├── sequence2/
+│   ├── interpolated_frames/
+│   ├── metrics.txt
+│   └── ...
+├── sequence3/
+│   ├── interpolated_frames/
+│   ├── metrics.txt
+│   └── ...
+└── ...
+```
+This structure ensures that results for each sequence are organized and easily accessible.
 
 
 ## **Citing**
