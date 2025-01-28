@@ -8,7 +8,7 @@ This repository is adapted from [LDMVFI](https://github.com/danier97/LDMVFI), wh
 
 ## **Paper**
 
-For detailed insights into the methodology and results, refer to the [original paper](https://github.com/danier97/LDMVFI). Additionally, this repository incorporates custom modifications for specific test sets, detailed below.
+For detailed insights into the methodology and results, please look at the (https://github.com/danier97/LDMVFI). Additionally, this repository incorporates custom modifications for specific test sets, detailed below.
 
 ---
 
@@ -24,16 +24,7 @@ For detailed insights into the methodology and results, refer to the [original p
 
 ---
 
-## **Pre-trained Model**
 
-Download the pre-trained model and configuration file:
-
-- [Pre-trained Model](https://drive.google.com/file/d/1LdmfF0Tk8d1-sample-link)
-- [Config File](https://github.com/danier97/LDMVFI/blob/main/configs/ldm/ldmvfi-vqflow-f32-c256-concat_max.yaml)
-
-Place these files in your working directory.
-
----
 
 ## **Custom Test Set Implementation**
 
@@ -48,17 +39,7 @@ The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, an
 
 ---
 
-## **Preparing Datasets**
 
-### **Training Sets**
-- [Vimeo-90K](http://toflow.csail.mit.edu/)
-- [BVI-DVC Quintuplets](https://github.com/BVI-DVC)
-
-### **Test Sets**
-- [Middlebury](https://vision.middlebury.edu/)
-- [UCF101](https://www.crcv.ucf.edu/research/data-sets/ucf101/)
-- [DAVIS](https://davischallenge.org/)
-- [SNU-FILM](https://github.com/JihyongOh/SNU-FILM)
 
 ### **Custom Dataset Structure**
 The custom dataset used in this implementation follows this folder structure:
@@ -89,50 +70,7 @@ Each sequence is stored in its own folder under `input` and `gt`. The `input` fo
 
 ---
 
-## **Evaluation**
 
-### Evaluate using PSNR/SSIM/LPIPS metrics
-For example, on the Middlebury dataset:
-```bash
-python evaluate.py \
---config configs/ldm/ldmvfi-vqflow-f32-c256-concat_max.yaml \
---ckpt <path/to/ldmvfi-vqflow-f32-c256-concat_max.ckpt> \
---dataset Middlebury_others \
---metrics PSNR SSIM LPIPS \
---data_dir <path/to/data/dir> \
---out_dir eval_results/ldmvfi-vqflow-f32-c256-concat_max/ \
---use_ddim
-```
-
-### Evaluate using FloLPIPS
-To evaluate perceptual video metrics like FloLPIPS:
-```bash
-python evaluate_vqm.py \
---exp ldmvfi-vqflow-f32-c256-concat_max \
---dataset Middlebury_others \
---metrics FloLPIPS \
---data_dir <path/to/data/dir> \
---out_dir eval_results/ldmvfi-vqflow-f32-c256-concat_max/
-```
-
----
-
-## **Video Interpolation**
-
-To interpolate a video in `.yuv` format:
-```bash
-python interpolate_yuv.py \
---net LDMVFI \
---config configs/ldm/ldmvfi-vqflow-f32-c256-concat_max.yaml \
---ckpt <path/to/ldmvfi-vqflow-f32-c256-concat_max.ckpt> \
---input_yuv <path/to/input/yuv> \
---size <spatial res of video, e.g. 1920x1080> \
---out_fps <output fps, should be 2 x original fps> \
---out_dir <desired/output/dir> \
---use_ddim
-```
-
----
 
 ## **Citing**
 
