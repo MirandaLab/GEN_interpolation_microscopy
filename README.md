@@ -24,8 +24,6 @@ For detailed insights into the methodology and results, please look at the (http
 
 ---
 
-
-
 ## **Custom Test Set Implementation For the Odds and Evens Frames**
 
 This repository includes a modified test set handler in the file `testset_custome.py`. This file dynamically generates sequences and handles input and ground truth frames for evaluation. Below are the key highlights of its functionality:
@@ -38,8 +36,6 @@ This repository includes a modified test set handler in the file `testset_custom
 The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, and subfolders will be created for each sequence. For example, for `sequence1`, the results will be stored in `LDMVFI/eval_results/CustomData/sequence1/`.
 
 ---
-
-
 
 ### **Custom Dataset Structure the Odds and Evens Frames**
 The custom dataset used in this implementation follows this folder structure:
@@ -93,7 +89,6 @@ LDMVFI/eval_results/CustomData/
 ```
 This structure ensures that results for each sequence are organized and easily accessible.
 
-
 ## **Citing**
 
 If you use this repository or the adapted methods, please cite the original repository:
@@ -105,10 +100,6 @@ If you use this repository or the adapted methods, please cite the original repo
   year = {2023},
   url = {https://github.com/danier97/LDMVFI},
 }
-```
-
----
-
 ```
 
 ---
