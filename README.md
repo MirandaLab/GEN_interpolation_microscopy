@@ -8,7 +8,7 @@ This repository is adapted from [LDMVFI](https://github.com/danier97/LDMVFI), wh
 
 ## **Paper**
 
-For detailed insights into the methodology and results, refer to the [original paper](https://github.com/danier97/LDMVFI).
+For detailed insights into the methodology and results, refer to the [original paper](https://github.com/danier97/LDMVFI). Additionally, this repository incorporates custom modifications for specific test sets, detailed below.
 
 ---
 
@@ -35,6 +35,19 @@ Place these files in your working directory.
 
 ---
 
+## **Custom Test Set Implementation**
+
+This repository includes a modified test set handler in the file `testset_custome.py`. This file dynamically generates sequences and handles input and ground truth frames for evaluation. Below are the key highlights of its functionality:
+
+- **Dynamic Sequence Handling**: The file automatically generates sequence names for multiple sequences, making it adaptable to datasets with varying numbers of sequences.
+- **Input Frame Processing**: For each sequence, it loads and transforms two input frames (`1.png` and `3.png`) from the `input` folder. Missing frames trigger a warning.
+- **Ground Truth Frame Handling**: The corresponding ground truth frame (`2.png`) is loaded and transformed. If the ground truth frame is missing, a warning is logged.
+- **Debugging Information**: The script prints the total number of successfully loaded input and ground truth frames, helping users verify the dataset's integrity.
+
+The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, and subfolders will be created for each sequence. For example, for `sequence1`, the results will be stored in `LDMVFI/eval_results/CustomData/sequence1/`.
+
+---
+
 ## **Preparing Datasets**
 
 ### **Training Sets**
@@ -47,36 +60,32 @@ Place these files in your working directory.
 - [DAVIS](https://davischallenge.org/)
 - [SNU-FILM](https://github.com/JihyongOh/SNU-FILM)
 
-### **Dataset Structure**
-Ensure your datasets follow the directory structure:
+### **Custom Dataset Structure**
+The custom dataset used in this implementation follows this folder structure:
 ```
 <data_directory>/
-├── middlebury_others/
+├── customedata/
 │   ├── input/
-│   │   ├── Beanbags/
-│   │   └── Walking/
+│   │   ├── sequence1/
+│   │   │   ├── 1.png
+│   │   │   └── 3.png
+│   │   ├── sequence2/
+│   │   │   ├── 1.png
+│   │   │   └── 3.png
+│   │   ├── sequence3/
+│   │   │   ├── 1.png
+│   │   │   └── 3.png
+│   │   └── ...
 │   └── gt/
-│       ├── Beanbags/
-│       └── Walking/
-├── ucf101/
-│   ├── 0/
-│   ├── 1/
-│   └── ...
-├── davis90/
-│   ├── bear/
-│   ├── car/
-│   └── ...
-├── snufilm/
-│   ├── test-easy.txt
-│   └── data/SNU-FILM/test/
-├── bvidvc/quintuplets/
-│   ├── 00000/
-│   └── ...
-└── vimeo_septuplet/
-    ├── sequences/
-    ├── sep_testlist.txt
-    └── sep_trainlist.txt
+│       ├── sequence1/
+│       │   └── 2.png
+│       ├── sequence2/
+│       │   └── 2.png
+│       ├── sequence3/
+│       │   └── 2.png
+│       └── ...
 ```
+Each sequence is stored in its own folder under `input` and `gt`. The `input` folder contains the input frames (`1.png` and `3.png`), while the `gt` folder contains the corresponding ground truth frame (`2.png`).
 
 ---
 
@@ -127,7 +136,7 @@ python interpolate_yuv.py \
 
 ## **Citing**
 
-
+If you use this repository or the adapted methods, please cite the original repository:
 
 ```
 @misc{ldmvfi,
@@ -136,6 +145,10 @@ python interpolate_yuv.py \
   year = {2023},
   url = {https://github.com/danier97/LDMVFI},
 }
+```
+
+---
+
 ```
 
 ---
