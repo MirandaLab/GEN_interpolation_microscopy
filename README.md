@@ -26,7 +26,7 @@ For detailed insights into the methodology and results, please look at the (http
 
 
 
-## **Custom Test Set Implementation**
+## **Custom Test Set Implementation For the Odds and Evens Frames**
 
 This repository includes a modified test set handler in the file `testset_custome.py`. This file dynamically generates sequences and handles input and ground truth frames for evaluation. Below are the key highlights of its functionality:
 
@@ -41,7 +41,7 @@ The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, an
 
 
 
-### **Custom Dataset Structure**
+### **Custom Dataset Structure the Odds and Evens Frames**
 The custom dataset used in this implementation follows this folder structure:
 ```
 <data_directory>/
