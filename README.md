@@ -24,39 +24,6 @@ A PyTorch-based implementation of Latent Diffusion Models for Video Frame Interp
 
 ---
 
-## 🔧 Installation Guide
-
-Follow the steps below to set up the environment and run the model.
-
----
-
-### ✅ Prerequisites
-
-Ensure the following are installed on your system:
-
-- [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- [Git](https://git-scm.com/)
-
----
-
-### 📥 1. Clone the Repository
-
-```bash
-git clone https://github.com/danier97/LDMVFI.git
-cd LDMVFI
-
-
-
-## **Custom Test Set Implementation For the Odds and Evens Frames**
-
-This repository includes a modified test set handler in the file `testset_custome.py`. This file dynamically generates sequences and handles input and ground truth frames for evaluation. Below are the key highlights of its functionality:
-
-- **Dynamic Sequence Handling**: The file automatically generates sequence names for multiple sequences, making it adaptable to datasets with varying numbers of sequences.
-- **Input Frame Processing**: For each sequence, it loads and transforms two input frames (`1.png` and `3.png`) from the `input` folder. Missing frames trigger a warning.
-- **Ground Truth Frame Handling**: The corresponding ground truth frame (`2.png`) is loaded and transformed. If the ground truth frame is missing, a warning is logged.
-- **Debugging Information**: The script prints the total number of successfully loaded input and ground truth frames, helping users verify the dataset's integrity.
-
-The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, and subfolders will be created for each sequence. For example, for `sequence1`, the results will be stored in `LDMVFI/eval_results/CustomData/sequence1/`.
 
 ---
 
