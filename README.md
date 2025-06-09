@@ -34,6 +34,11 @@ cd LDMVFI
 Download the pretrained model file ldmvfi-vqflow-f32-c256-concat_max.ckpt from (https://github.com/danier97/LDMVFI?tab=readme-ov-file)
 
 Create a directory named checkpoints and move the file into it:
+``` bash
+mkdir -p checkpoints
+mv ldmvfi-vqflow-f32-c256-concat_max.ckpt checkpoints/
+
+```
 ---
 
 ## **Custom Test Set Implementation For the Odds and Evens Frames**
