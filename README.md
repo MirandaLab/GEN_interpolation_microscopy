@@ -25,6 +25,11 @@ cd LDMVFI
    conda env create -f environment.yaml
    conda activate <environment_name>
    ```
+3. (Optional) Install LDMVFI as a Python Package
+   ``` bash
+   pip install -e 
+
+   ```
 
 ---
 
