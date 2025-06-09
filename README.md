@@ -20,44 +20,36 @@ Follow these steps to set up the environment and run the model.
 
 ---
 
-### Prerequisites
+🔧 Installation Guide
+Follow the steps below to set up the environment and run the model.
 
-Make sure you have **Anaconda** or **Miniconda** installed on your system.
+✅ Prerequisites
+Make sure Anaconda or Miniconda is installed on your system.
 
----
+Git should be installed to clone the repository.
 
-### 1. Clone the Repository
-
-```bash
+📥 1. Clone the Repository
+bash
+Copy
+Edit
 git clone https://github.com/danier97/LDMVFI.git
 cd LDMVFI
+📦 2. Create and Activate the Conda Environment
+bash
+Copy
+Edit
+conda env create -f environment.yaml
+conda activate ldmvfi
+This command creates the environment and installs all necessary dependencies, including PyTorch and PyTorch Lightning.
 
+🧩 3. (Optional) Install LDMVFI as a Local Python Package
+If you plan to modify or use LDMVFI as a library:
 
+bash
+Copy
+Edit
+pip install -e .
 
-## **Dependencies and Installation**
-
-
-## Installation Guide
-
-Follow these steps to set up the environment and run the model.
-
----
-### Prerequisites
-Install Conda if it is not already installed.
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/danier97/LDMVFI.git
-cd LDMVFI
-
-
-### 2.Create the environment and install dependencies:
-   ```bash
-   conda env create -f environment.yaml
-   conda activate <environment_name>
-   ```
-
----
 
 ## **Custom Test Set Implementation For the Odds and Evens Frames**
 
