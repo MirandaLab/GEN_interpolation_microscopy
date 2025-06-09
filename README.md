@@ -29,7 +29,7 @@ git clone https://github.com/danier97/LDMVFI.git
 cd LDMVFI
 
 
-Create the environment and install dependencies:
+### 2.Create the environment and install dependencies:
    ```bash
    conda env create -f environment.yaml
    conda activate <environment_name>
