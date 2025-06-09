@@ -10,7 +10,6 @@ This repository is adapted from [LDMVFI](https://github.com/danier97/LDMVFI), wh
 
 For detailed insights into the methodology and results, please look at the (https://github.com/danier97/LDMVFI). Additionally, this repository incorporates custom modifications for specific test sets, detailed below.
 
----
 
 
 
@@ -44,7 +43,6 @@ Make sure you have **Anaconda** or **Miniconda** installed on your system.
 git clone https://github.com/danier97/LDMVFI.git
 cd LDMVFI
 
----
 
 ### **Custom Dataset Structure the Odds and Evens Frames**
 The custom dataset used in this implementation follows this folder structure:
