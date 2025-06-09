@@ -10,10 +10,32 @@ This repository is adapted from [LDMVFI](https://github.com/danier97/LDMVFI), wh
 
 For detailed insights into the methodology and results, please look at the (https://github.com/danier97/LDMVFI). Additionally, this repository incorporates custom modifications for specific test sets, detailed below.
 
+---
 
+## **Dependencies and Installation**
 
+### Prerequisites
+1. Install Conda if not already installed.
+2. Create the environment and install dependencies:
+   ```bash
+   conda env create -f environment.yaml
+   conda activate <environment_name>
+   ```
 
+---
 
+## **Custom Test Set Implementation For the Odds and Evens Frames**
+
+This repository includes a modified test set handler in the file `testset_custome.py`. This file dynamically generates sequences and handles input and ground truth frames for evaluation. Below are the key highlights of its functionality:
+
+- **Dynamic Sequence Handling**: The file automatically generates sequence names for multiple sequences, making it adaptable to datasets with varying numbers of sequences.
+- **Input Frame Processing**: For each sequence, it loads and transforms two input frames (`1.png` and `3.png`) from the `input` folder. Missing frames trigger a warning.
+- **Ground Truth Frame Handling**: The corresponding ground truth frame (`2.png`) is loaded and transformed. If the ground truth frame is missing, a warning is logged.
+- **Debugging Information**: The script prints the total number of successfully loaded input and ground truth frames, helping users verify the dataset's integrity.
+
+The results will be saved in the directory `LDMVFI/eval_results/CustomData/`, and subfolders will be created for each sequence. For example, for `sequence1`, the results will be stored in `LDMVFI/eval_results/CustomData/sequence1/`.
+
+---
 
 ### **Custom Dataset Structure the Odds and Evens Frames**
 The custom dataset used in this implementation follows this folder structure:
