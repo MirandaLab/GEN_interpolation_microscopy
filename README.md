@@ -12,6 +12,28 @@ For detailed insights into the methodology and results, please look at the (http
 
 ---
 
+
+
+## Installation Guide
+
+Follow these steps to set up the environment and run the model.
+
+---
+
+### Prerequisites
+
+Make sure you have **Anaconda** or **Miniconda** installed on your system.
+
+---
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/danier97/LDMVFI.git
+cd LDMVFI
+
+
+
 ## **Dependencies and Installation**
 
 
