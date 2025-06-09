@@ -14,9 +14,22 @@ For detailed insights into the methodology and results, please look at the (http
 
 ## **Dependencies and Installation**
 
+
+## Installation Guide
+
+Follow these steps to set up the environment and run the model.
+
+---
 ### Prerequisites
-1. Install Conda if not already installed.
-2. Create the environment and install dependencies:
+Install Conda if it is not already installed.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/danier97/LDMVFI.git
+cd LDMVFI
+
+
+Create the environment and install dependencies:
    ```bash
    conda env create -f environment.yaml
    conda activate <environment_name>
