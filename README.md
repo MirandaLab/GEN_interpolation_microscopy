@@ -24,6 +24,25 @@ A PyTorch-based implementation of Latent Diffusion Models for Video Frame Interp
 
 ---
 
+# LDMVFI - Latent Diffusion Model for Video Frame Interpolation
+
+## Installation Guide
+
+Follow these steps to set up the environment and run the model.
+
+---
+
+### Prerequisites
+
+Make sure you have **Anaconda** or **Miniconda** installed on your system.
+
+---
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/danier97/LDMVFI.git
+cd LDMVFI
 
 ---
 
