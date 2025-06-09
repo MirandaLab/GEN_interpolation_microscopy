@@ -30,7 +30,10 @@ cd LDMVFI
    pip install -e 
 
    ```
+4. Download the Pretrained Model Checkpoint
+Download the pretrained model file ldmvfi-vqflow-f32-c256-concat_max.ckpt from [the GitHub Releases page or project repository.](https://github.com/danier97/LDMVFI?tab=readme-ov-file)
 
+Create a directory named checkpoints and move the file into it:
 ---
 
 ## **Custom Test Set Implementation For the Odds and Evens Frames**
