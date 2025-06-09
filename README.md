@@ -17,8 +17,8 @@ For detailed insights into the methodology and results, please look at the (http
 ### Prerequisites
 1. Install Conda if not already installed.
  ```bash
-   conda env create -f environment.yaml
-   conda activate <environment_name>
+git clone https://github.com/danier97/LDMVFI.git
+cd LDMVFI
    ```
 2. Create the environment and install dependencies:
    ```bash
